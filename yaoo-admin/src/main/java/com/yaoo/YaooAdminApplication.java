@@ -12,10 +12,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 @SpringBootApplication
 @MapperScan("com.yaoo.dao")
-public class YaooApplication {
+public class YaooAdminApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(YaooApplication.class, args);
+        SpringApplication.run(YaooAdminApplication.class, args);
     }
 
 }
