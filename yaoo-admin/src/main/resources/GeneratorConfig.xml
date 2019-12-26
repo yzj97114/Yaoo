@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+
+
+    <classPathEntry location="D:/repository/mysql/mysql-connector-java/5.1.9/mysql-connector-java-5.1.9.jar" />
+    <context id="context1" targetRuntime="MyBatis3">
+        <commentGenerator>
+            <!-- 去除自动生成的注释 -->
+            <property name="suppressAllComments" value="true" />
+        </commentGenerator>
+
+        <!-- 数据库连接配置 -->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/yaoo"
+                        userId="root"
+                        password="123456"/>
+
+        <!-- 非必需，类型处理器，在数据库类型和java类型之间的转换控制-->
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
+
+
+        <!--JAVA模型生成，指定javabean生成位置-->
+        <javaModelGenerator targetPackage="com.yaoo.entity" targetProject="src/main/java">
+            <!--JAVA模型生成，指定javabean生成位置-->
+            <property name="enableSubPackages" value="true" />
+            <property name="trimStrings" value="true" />
+        </javaModelGenerator>
+
+        <!--指定sql映射文件生成位置-->
+        <sqlMapGenerator targetPackage="mapper"  targetProject="src/main/resources/mapper">
+            <!--指定sql映射文件生成位置-->
+            <property name="enableSubPackages" value="true" />
+        </sqlMapGenerator>
+
+        <!--指定dao生成的位置，mapper接口-->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.yaoo.dao"  targetProject="src/main/java">
+            <!--指定dao生成的位置，mapper接口-->
+            <property name="enableSubPackages" value="true" />
+        </javaClientGenerator>
+
+        <!-- 配置表
+       schema：不用填写
+       tableName: 表名
+       enableCountByExample、enableSelectByExample、enableDeleteByExample、enableUpdateByExample、selectByExampleQueryId：
+       去除自动生成的例子
+   -->
+        <table schema="" tableName="sys_config" enableCountByExample="false" enableSelectByExample="false"
+               enableDeleteByExample="false" enableUpdateByExample="false" selectByExampleQueryId="false" >
+        </table>
+        <table schema="" tableName="sys_dept" enableCountByExample="false" enableSelectByExample="false"
+               enableDeleteByExample="false" enableUpdateByExample="false" selectByExampleQueryId="false" >
+        </table>
+        <table schema="" tableName="sys_dict" enableCountByExample="false" enableSelectByExample="false"
+               enableDeleteByExample="false" enableUpdateByExample="false" selectByExampleQueryId="false" >
+        </table>
+        <table schema="" tableName="sys_log" enableCountByExample="false" enableSelectByExample="false"
+               enableDeleteByExample="false" enableUpdateByExample="false" selectByExampleQueryId="false" >
+        </table>
+        <table schema="" tableName="sys_login_log" enableCountByExample="false" enableSelectByExample="false"
+               enableDeleteByExample="false" enableUpdateByExample="false" selectByExampleQueryId="false" >
+        </table>
+        <table schema="" tableName="sys_menu" enableCountByExample="false" enableSelectByExample="false"
+               enableDeleteByExample="false" enableUpdateByExample="false" selectByExampleQueryId="false" >
+        </table>
+        <table schema="" tableName="sys_role" enableCountByExample="false" enableSelectByExample="false"
+               enableDeleteByExample="false" enableUpdateByExample="false" selectByExampleQueryId="false" >
+        </table>
+        <table schema="" tableName="sys_role_dept" enableCountByExample="false" enableSelectByExample="false"
+               enableDeleteByExample="false" enableUpdateByExample="false" selectByExampleQueryId="false" >
+        </table>
+        <table schema="" tableName="sys_role_menu" enableCountByExample="false" enableSelectByExample="false"
+               enableDeleteByExample="false" enableUpdateByExample="false" selectByExampleQueryId="false" >
+        </table>
+        <table schema="" tableName="sys_user" enableCountByExample="false" enableSelectByExample="false"
+               enableDeleteByExample="false" enableUpdateByExample="false" selectByExampleQueryId="false" >
+        </table>
+        <table schema="" tableName="sys_user_role" enableCountByExample="false" enableSelectByExample="false"
+               enableDeleteByExample="false" enableUpdateByExample="false" selectByExampleQueryId="false" >
+        </table>
+
+    </context>
+</generatorConfiguration>
