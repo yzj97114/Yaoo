@@ -27,10 +27,9 @@
 
 ###  核心框架使用Vue.js，UI使用饿了么的开源框架ElementUI,前后端交互使用了axios，使用Mock模拟接口数据。
 
-![](C:\Users\WIN10\Downloads\前段架构图.png)
+
 
 # 后端架构
 
 ###  后端架构采用Springboot+SpringSecurity+SpringCloud+Mybatis的主体架构，选择Consul注册中心，Maven构建工具，Mysql数据库。
 
-![](C:\Users\WIN10\Downloads\后端架构.png)
