@@ -22,3 +22,15 @@
 ### ●服务网关：集成SpringCloud Zuul，实现统一API服务网关。
 ### ●链路追踪：集成Sleuth、ZipKin，实现服务分布式链路追踪。
 ### ●配置中心：集成Config和Bus，实现分布式配置中心。
+
+# 前端架构
+
+###  核心框架使用Vue.js，UI使用饿了么的开源框架ElementUI,前后端交互使用了axios，使用Mock模拟接口数据。
+
+![](C:\Users\WIN10\Downloads\前段架构图.png)
+
+# 后端架构
+
+###  后端架构采用Springboot+SpringSecurity+SpringCloud+Mybatis的主体架构，选择Consul注册中心，Maven构建工具，Mysql数据库。
+
+![](C:\Users\WIN10\Downloads\后端架构.png)
