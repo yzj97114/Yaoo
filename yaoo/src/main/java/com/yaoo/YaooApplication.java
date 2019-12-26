@@ -11,7 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @Copyright 792826371@qq.com
  */
 @SpringBootApplication
-@MapperScan("com.yaoo.mapper")
+@MapperScan("com.yaoo.dao")
 public class YaooApplication {
 
     public static void main(String[] args) {

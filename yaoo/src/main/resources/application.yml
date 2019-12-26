@@ -3,10 +3,27 @@ server:
 
 spring:
   datasource:
-    username: root
-    password: 123456
-    url: jdbc:mysql://localhost:3306/yaoo?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
-    driver-class-name: com.mysql.jdbc.Driver
+    name: druidDataSource
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/yaoo?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+      username: root
+      password: 123456
+      filters: stat,wall,log4j,config
+      max-active: 100 #最大连接数
+      initial-size: 1 #初始化大小
+      max-wait: 60000 #获取连接等待超时时间
+      min-idle: 1 #最小连接数
+      time-between-eviction-runs-millis: 60000 #间隔多久检测需要关闭的连接
+      min-evictable-idle-time-millis: 300000 #最小生存时间
+      validation-query: select 'x'
+      test-while-idle: true
+      test-on-return: false
+      test-on-borrow: false
+      pool-prepared-statements: true
+      max-open-prepared-statements: 50
+      max-pool-prepared-statement-per-connection-size: 20
 
 mybatis:
   mapper-locations: classpath:mapper/*Mapper.xml
