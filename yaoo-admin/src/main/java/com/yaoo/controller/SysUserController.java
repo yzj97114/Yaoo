@@ -5,10 +5,7 @@ import com.yaoo.core.page.PageRequest;
 import com.yaoo.entity.SysUser;
 import com.yaoo.service.SysUserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -27,9 +24,8 @@ public class SysUserController {
         return sysUserService.findAll();
     }
 
-    @GetMapping("/findPage")
+    @PostMapping("/findPage")
     public HttpResult findPage(@RequestBody PageRequest pageRequest) {
-
         return HttpResult.ok(sysUserService.findPage(pageRequest));
     }
 }
